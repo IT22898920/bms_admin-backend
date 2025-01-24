@@ -62,6 +62,10 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Backend API!");
 });
 
+app.all("*", (req, res) => {
+  res.status(404).send("Route not found");
+});
+
 
 // Error Middleware
 app.use(errorHandler);
