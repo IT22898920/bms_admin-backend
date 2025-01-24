@@ -58,6 +58,11 @@ app.use("/api/client-service", clientServiceManagementRoutes);
 app.use("/api/notifications", notificationsRoutes);
 app.use("/api/role", roleRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Backend API!");
+});
+
+
 // Error Middleware
 app.use(errorHandler);
 // Start the server
